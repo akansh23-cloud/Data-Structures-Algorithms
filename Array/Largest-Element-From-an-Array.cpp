@@ -4,7 +4,6 @@ using namespace std;
 int largest(int arr[], int n)
 {
     int i;
-     
     // Initialize maximum element
     int max = arr[0];
  
@@ -21,8 +20,13 @@ int largest(int arr[], int n)
 // Driver Code
 int main()
 {
-    int arr[] = {10, 324, 45, 90, 9808};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    cin>>n;  // Enter the no of elements in array or its size
+    int *arr = new int[n];
+    for(int i=0;i<n;i++)
+    {
+    cin>>arr[i];  // Taking input from the user
+    }  
     cout << "Largest in given array is "
          << largest(arr, n);
     return 0;
